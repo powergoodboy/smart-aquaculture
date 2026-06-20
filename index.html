@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水井村智慧養殖戰情室 - 風雲客棧特約</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🎏 水井村智慧養殖戰情室</div>
+        <nav>
+            <ul>
+                <li><a href="#midterm">期中：風雲客棧</a></li>
+                <li><a href="#iot">期末新功能：IoT 戰情室</a></li>
+                <li><a href="#ai-ar">AI & AR 科技</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="midterm" class="section-box">
+        <h2>🏨 期中回顧：風雲客棧</h2>
+        <p>提供在地最溫馨的住宿與餐飲體驗。期末全新升級——引進智慧養殖技術，實現「產地到餐桌」的科技漁村生活！</p>
+    </section>
+
+    <section id="iot" class="section-box">
+        <h2>📊 期末新增：IoT 魚塘即時監控 (生產面向)</h2>
+        <p class="tech-tag">重點技術：IoT 物聯網數據對接</p>
+        
+        <div class="dashboard">
+            <div class="card">
+                <h3>🌡️ 目前水溫</h3>
+                <p class="data-value" id="temp-val">26.5 °C</p>
+                <span class="status green">狀態：正常</span>
+            </div>
+            <div class="card">
+                <h3>💧 溶氧量 (DO)</h3>
+                <p class="data-value" id="do-val">5.8 mg/L</p>
+                <span class="status green">狀態：正常</span>
+            </div>
+            <div class="card">
+                <h3>🧪 pH 值</h3>
+                <p class="data-value" id="ph-val">7.2</p>
+                <span class="status red">狀態：偏低預警</span>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="iotChart"></canvas>
+        </div>
+    </section>
+
+    <section id="ai-ar" class="section-box">
+        <h2>🤖 期末新增：AI 辨識與 AR 導覽 (生態/生活面向)</h2>
+        
+        <div class="grid-2">
+            <div class="card-tech">
+                <h3>重點技術：AI 魚病預警</h3>
+                <p>結合電腦視覺，養殖戶只需上傳魚隻照片，AI 即可自動分析鱗片與活動力，辨識病害風險。</p>
+                <button class="btn" onclick="alert('AI 模組啟動中...（此處可對接 Teachable Machine）')">模擬 AI 辨識</button>
+            </div>
+            
+            <div class="card-tech">
+                <h3>重點技術：WebAR 虛擬魚塘</h3>
+                <p>遊客在風雲客棧用手機掃描，即可透過 AR 在餐桌上看到智慧魚塘的 3D 生態模型，達到科技導覽效果。</p>
+                <button class="btn" onclick="alert('AR 鏡頭啟動中...（此處可置入 model-viewer）')">開啟 AR 體驗</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 水井村 USR 計畫 期末專題特製 | 湖虎戰隊致敬版</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
