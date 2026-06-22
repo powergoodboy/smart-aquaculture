@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>水井村智慧養殖戰情室 - 風雲客棧特約</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,8 +15,9 @@
         <nav>
             <ul>
                 <li><a href="#midterm">期中：風雲客棧</a></li>
-                <li><a href="#iot">期末新功能：IoT 戰情室</a></li>
-                <li><a href="#ai-ar">AI & AR 科技</a></li>
+                <li><a href="#iot">期末：IoT戰情室</a></li>
+                <li><a href="#ai-ar">AI & AR科技</a></li>
+                <li><a href="#benefits">三生貢獻加分</a></li>
             </ul>
         </nav>
     </header>
@@ -59,21 +61,14 @@
             <div class="card-tech">
                 <h3>重點技術：AI 魚病預警</h3>
                 <p>結合電腦視覺，養殖戶只需上傳魚隻照片，AI 即可自動分析鱗片與活動力，辨識病害風險。</p>
-                <button class="btn" onclick="alert('AI 模組啟動中...（此處可對接 Teachable Machine）')">模擬 AI 辨識</button>
+                
+                <div style="margin: 15px 0;">
+                    <input type="file" id="ai-upload" accept="image/*" style="display:none;">
+                    <button class="btn" onclick="document.getElementById('ai-upload').click()">📷 上傳魚隻照片</button>
+                </div>
+                <div id="ai-result" style="margin-top: 10px; font-weight: bold; color: #117a65;"></div>
             </div>
             
             <div class="card-tech">
                 <h3>重點技術：WebAR 虛擬魚塘</h3>
-                <p>遊客在風雲客棧用手機掃描，即可透過 AR 在餐桌上看到智慧魚塘的 3D 生態模型，達到科技導覽效果。</p>
-                <button class="btn" onclick="alert('AR 鏡頭啟動中...（此處可置入 model-viewer）')">開啟 AR 體驗</button>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 水井村 USR 計畫 期末專題特製 | 湖虎戰隊致敬版</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                <p>遊客在風雲客棧用手機掃描，即可透過 AR 在餐桌上

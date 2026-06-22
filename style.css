@@ -62,8 +62,8 @@ header nav ul li a {
     font-weight: bold;
 }
 
-/* 戰情室卡片排版 */
-.dashboard, .grid-2 {
+/* 戰情室與技術網格排版 */
+.dashboard, .grid-2, .grid-3 {
     display: flex;
     gap: 20px;
     margin-top: 20px;
@@ -111,6 +111,7 @@ header nav ul li a {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    transition: background 0.2s;
 }
 .btn:hover { background-color: #1f618d; }
 
@@ -118,6 +119,63 @@ header nav ul li a {
     margin-top: 30px;
     padding: 20px;
     background: #fff;
+}
+
+/* 三生貢獻區專屬樣式 */
+.card-sansheng {
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid #e5e8e8;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.card-sansheng:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-sansheng h3 {
+    margin: 5px 0;
+    color: #2c3e50;
+    font-size: 1.25rem;
+}
+
+.card-sansheng h4 {
+    margin: 0 0 15px 0;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.card-sansheng ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.card-sansheng ul li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #5d6d7e;
+}
+
+.card-sansheng ul li strong {
+    color: #2c3e50;
 }
 
 footer {
